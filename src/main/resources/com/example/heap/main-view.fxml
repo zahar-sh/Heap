@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.heap.controller.MainController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <AnchorPane BorderPane.alignment="CENTER">
+            <children>
+                <Canvas fx:id="canvas" focusTraversable="true" height="500.0" width="500.0"
+                        AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0"
+                        AnchorPane.topAnchor="8.0"/>
+            </children>
+        </AnchorPane>
+    </center>
+    <right>
+        <GridPane hgap="4.0" vgap="4.0">
+            <columnConstraints>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+            <children>
+                <Label text="Add"/>
+                <Label text="Contains" GridPane.rowIndex="1"/>
+                <Label text="Get" GridPane.rowIndex="2"/>
+                <Label text="Remove" GridPane.rowIndex="3"/>
+                <Label text="Poll" GridPane.rowIndex="4"/>
+                <Label text="Format" GridPane.rowIndex="5"/>
+                <Label text="Clear" GridPane.rowIndex="6"/>
+                <Label text="Element size" GridPane.rowIndex="7"/>
+                <Label text="Element color" GridPane.rowIndex="8"/>
+                <Label text="Selected color" GridPane.rowIndex="9"/>
+                <Label text="Links color" GridPane.rowIndex="10"/>
+                <TextField fx:id="addTextField" GridPane.columnIndex="1"/>
+                <TextField fx:id="getTextField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <TextField fx:id="containsTextField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <TextField fx:id="removeTextField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                <Button fx:id="pollButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Poll"
+                        GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                <Button fx:id="formatButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Format"
+                        GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                <Button fx:id="clearButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Clear"
+                        GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+                <HBox fillHeight="false" prefWidth="150.0" spacing="2.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                    <children>
+                        <TextField fx:id="elementWidthTextField"/>
+                        <TextField fx:id="elementHeightTextField"/>
+                    </children>
+                </HBox>
+                <ColorPicker fx:id="elementColorColorPicker" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1"
+                             GridPane.rowIndex="8"/>
+                <ColorPicker fx:id="selectedColorPicker" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1"
+                             GridPane.rowIndex="9"/>
+                <ColorPicker fx:id="linksColorPicker" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1"
+                             GridPane.rowIndex="10"/>
+            </children>
+            <padding>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+            </padding>
+        </GridPane>
+    </right>
+</BorderPane>
